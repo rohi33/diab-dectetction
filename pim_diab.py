@@ -32,8 +32,8 @@ X_test=mm.fit_transform(X_test)
 #SInce I'm using Naive Bayes, which is equipped for handling weight, no need of feature scaling
 
 #Fitting model
-from sklearn.naive_bayes import GaussianNB
-classifier=GaussianNB()
+from sklearn import svm
+classifier=svm.csv()
 classifier.fit(X_train, y_train)
 '''
 inp=[]
