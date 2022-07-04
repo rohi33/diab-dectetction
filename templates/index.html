@@ -4,11 +4,41 @@
 <head>
   <meta charset="UTF-8">
   <title>ML API</title>
+  <link rel="stylesheet" href="ab.css">
   <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
-  
+  <style>h1{
+    font-size: 1cm;
+    background-color: yellow;
+    color: red;
+    text-align: justify;
+    text-shadow: 5cm ;
+    transform: rotate3d(0);   
+}
+input[type=text]{
+    width: 15%;
+    margin: 8px 0;
+    padding: 12px 20px;
+    display: inline-block;
+    border: 2px inset rgb(235, 7, 75);
+    box-sizing: border-box;
+}
+button:hover{
+opacity: 0.5;
+color: yellow;
+}
+button{
+    background-color: rgb(16, 130, 230);
+    width: 15%;
+    color: black;
+    padding: 15px;
+    margin: 10px 2px;
+    border: 2px ridge rgb(0, 0, 0);
+    cursor: progress;
+    border-radius: 25%;
+}</style>
 </head>
 
 <body>
@@ -17,16 +47,16 @@
 
      <!-- Main Input For Receiving Query to our ML -->
     <form action="{{ url_for('predict')}}"method="post">
-    	<input type="text" name="Plasma Glucose level" placeholder="Plasma Glucose level" required="required" /> <br>
-	    <input type="text" name="Insulin level" placeholder="Insulin level" required="required" /> <br>
-		<input type="text" name="age" placeholder="age" required="required" />
-
-        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    	<center> <input type="text" name="Plasma Glucose level" placeholder="Plasma Glucose level" required="required" /></center> <br>
+	   <center> <input type="text" name="Insulin level" placeholder="Insulin level" required="required" /></center> <br>
+		<center><input type="text" name="age" placeholder="age" required="required" ></center>
+<br>
+       <center> <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button></center>
     </form>
 
    <br>
    <br>
-   {{ pred_text }}
+   
 
  </div>
 
